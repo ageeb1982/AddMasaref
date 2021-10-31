@@ -1,0 +1,59 @@
+﻿ $(document).ready(function () {
+     $(".table.with-responsive-wrapper").floatThead({
+         responsiveContainer: function ($table) {
+             return $table.closest(".table-responsive");
+         }
+     });
+     $(".table.without-responsive-wrapper").floatThead();
+
+
+
+
+            var DataTableZ = $('.TableX').DataTable(
+                                 {
+
+                                     "language": {
+                                         "sProcessing": "جارٍ التحميل...",
+                                         "sLengthMenu": "أظهر _MENU_ سجل",
+                                         "sZeroRecords": "لم يعثر على أي سجلات",
+                                         "sInfo": "إظهار _START_ إلى _END_ من أصل _TOTAL_ سجل",
+                                         "sInfoEmpty": "يعرض 0 إلى 0 من أصل 0 سجل",
+                                         "sInfoFiltered": "(منتقاة من مجموع _MAX_ مُدخل)",
+                                         "sInfoPostFix": "",
+                                         "sSearch": "ابحث داخل الجدول الحالي:",
+                                         "sUrl": "",
+                                         "oPaginate": {
+                                             "sFirst": "الأول",
+                                             "sPrevious": "السابق",
+                                             "sNext": "التالي",
+                                             "sLast": "الأخير"
+                                         }
+                                     },
+                                     "lengthMenu": [[-1, 5, 10, 25, 50, 100], ["الكل", 5, 10, 25, 50, 100]]
+
+
+                                     //,"columnDefs": [
+                                     //    {
+
+                                     //        "targets": 0,
+                                     //        "orderable": false
+                                     //    }
+                                     //]
+
+                                 });
+
+            //var DD = [, , , ,]
+            $('.dataTables_length').addClass('hidden-print');
+            //$().addClass('hidden-print');
+            $('.dataTables_filter').addClass('hidden-print');
+            $('.dataTables_filter').addClass('hidden-print');
+            $('.dataTables_paginate').addClass('hidden-print');
+            $('.paging_simsple_numbers').addClass('hidden-print');
+//     $.each(DD, function (index, d) {
+       
+//           ;
+//         $(this).addClass('hidden-print');
+//         console.log($(this).attr("class"));
+//});
+
+        });

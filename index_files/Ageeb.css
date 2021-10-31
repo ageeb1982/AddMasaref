@@ -1,0 +1,243 @@
+﻿@font-face {
+    font-family: 'Font1';
+    src: url('../fonts/Font1.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Font2';
+    src: url('../fonts/Font2.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font3';
+    src: url('../fonts/Font3.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font4';
+    src: url('../fonts/Font4.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'font5';
+    src: url('../fonts/font5.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font6';
+    src: url('../fonts/Font6.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Font7';
+    src: url('../fonts/Font7.ttf') format('truetype');
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+    border-color: transparent transparent black transparent;
+}
+.navbar-brand
+{
+    font-weight: bold
+}
+.icon-bar
+  {
+    font-size:18px;
+    background-color: #7b87c3;
+    
+}
+
+
+
+
+ 
+
+
+
+
+@media (max-width: 1135px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+.delayX {
+    
+ 
+background-color:#91b9e8;
+}
+
+.contractX
+{ 
+    
+background-color: #c29fe4;
+}
+
+
+
+.NoteX{
+     
+background-color:#c5e8d1;
+}
+
+
+.PartX {
+    background-color: #df7979;
+}
+
+.home .h4 {
+    border: black solid;
+    margin: 4px;
+    padding: 5px;
+}
+/*.table-responsive { direction: rtl; } 
+.table-responsive > table { direction: rtl; }
+.table-responsive .table { 
+    max-width: none;
+   -webkit-overflow-scrolling: touch !important;
+
+}*/
+table.floatThead-table {
+    border-top: none;
+    border-bottom: none;
+    background-color: #FFF;
+}
+.table-responsive .table {
+    max-width: none;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+
+.col-print-1 {width:8%;  float:left;}
+.col-print-2 {width:16%; float:left;}
+.col-print-3 {width:25%; float:left;}
+.col-print-4 {width:33%; float:left;}
+.col-print-5 {width:42%; float:left;}
+.col-print-6 {width:50%; float:left;}
+.col-print-7 {width:58%; float:left;}
+.col-print-8 {width:66%; float:left;}
+.col-print-9 {width:75%; float:left;}
+.col-print-10{width:83%; float:left;}
+.col-print-11{width:92%; float:left;}
+.col-print-12{width:100%; float:left;}
+
+/*@media print {
+    .WontBuys, .OfferBuy, .Offers, .NewOffer, .delayX, .contractX, .St_Debit, .St_Contract, .PartX, .NoteX {
+        color: black;
+        font-weight: bold;
+             text-shadow:  none;
+        
+    }
+    }*/
+
+    .WontBuys, .OfferBuy, .Offers, .NewOffer, .delayX, .contractX, .St_Debit, .St_Contract, .PartX, .NoteX {
+        color: white;
+        font-weight: bold;
+        /* border:1px solid  ;*/
+        font-style: italic;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        text-align: center;
+    }
+
+    .delayX, .contractX, .St_Debit, .St_Contract, .PartX, .NoteX {
+        font-size: 20px;
+        font-style: normal;
+        padding-top: 10px;
+        border: solid;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .delayX {
+        border-color: blue;
+    }
+
+    .contractX {
+        border-color: blueviolet;
+    }
+
+    .St_Debit {
+        border-color: orangered;
+    }
+
+    .St_Contract {
+        border-color: blueviolet;
+    }
+
+    .PartX {
+        border-color: red;
+    }
+
+    .NoteX {
+        border-color: green;
+    }
+
+    .WontBuys {
+        background-color: #df7979;
+        border-color: red;
+    }
+
+    .OfferBuy {
+        background-color: #c5e8d1;
+        border-color: green
+    }
+
+    .Offers {
+        background-color: #91b9e8;
+        border-color: blue;
+    }
+
+    .NewOffer {
+        background-color: #db8776;
+        border-color: orangered;
+    }
+
+.dropdown{
+    font-weight:bold;
+}
+
+th.St_Name_Caption {
+    font-weight: bold;
+    background-color: #cae9f5;
+    color: red;
+    text-align: center;
+    border:solid 0.5px blue;
+
+}
+
+    th.St_Name_Caption a {
+        color: white;
+        text-shadow:
+            -1px 0 #0039fb,
+            0 1px #0039fb,
+            1px 0 #0039fb,
+            0 -1px #0039fb;
+    }
