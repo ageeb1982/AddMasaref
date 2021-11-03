@@ -23,6 +23,8 @@
     <link href="./index_files/Ageeb.css" rel="stylesheet">
     <link href="./index_files/textareaX.css" rel="stylesheet">
     <link href="./index_files/subMenu.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -247,130 +249,62 @@
             <div dir="rtl">
                 <br class="hidden-print">
                 <h2>المطالبات المستلمة</h2>
-                <form action="https://alarkan-group.com/Debits/Rec_Ok" method="post"><input
-                        name="__RequestVerificationToken" type="hidden"
-                        value="q4fmnWJFt7X2bYBi6SiwV6-sSOKXJTLqlqL0W_Hdspqh3wLiO8VgWFAUv6GKtoWtULfmdnpnnnj6sVYPXOrwBpSCbetyFX4LbBr7lQzFbWoqrDx96wkJUU_r9_e3q9r-jqwWfg2">
-                    <input hidden="" id="listX" name="listX"
-                        value="8025,8086,6353,5989,7817,7682,8107,8098,8101,7893,7897,6218,5654,8108,6140,8102,7189,6417-350,351,352,353,354,355,356,357,358,359,360,361">
-                    <div style="text-align:left">
-                        <input type="number" style="width: 80px;" name="Mony_Ren" value="0"
-                            placeholder="المبالغ المعلقة المتبقية" id="Mony_Ren" class="">
-                        <input type="submit" id="cmdMony_Ren" value="تم إستلام الكل ">
-                    </div>
-                    <br>
-                </form>
-                <style>
-                    .massX {
-                        display: flex;
-                        justify-content: center;
-                    }
-
-                    .outMasaref {
-
-                        font-weight: bold;
-                        border: 2px solid rgb(95, 80, 80);
-                        border-radius: 10%;
-                        padding: 10px;
-                        box-shadow: 5px 5px black;
-                        background-color: #b2c0d6;
-                        justify-items: center;
-                        align-items: center;
-                        align-self: center;
-                        width: 30%;
-                        height: 85px;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-                        align-content: space-between;
-                    }
-
-                    .outMasaref select {
-                        width: 25%;
-                    }
-
-                    label {
-                        text-align: left;
-                    }
-
-                    .outMasaref .monyA {
-                        width: 20%;
-                    }
-
-                    .outMasaref .lbl1 {
-                        width: 22%;
-                    }
-
-                    .outMasaref .lbl2 {
-                        width: 22%;
-                    }
-
-                    .outMasaref .lbl3 {
-                        width: 13%;
-                    }
-
-                    .outMasaref .noteA {
-                        width: 60%;
-                    }
-
-                    .outMasaref .cmdA {
-                        background-color: rgb(45, 64, 126);
-                        border: 2px solid white;
-                        border-radius: 15%;
-                        box-shadow: 2px 2px rgb(180, 231, 231),
-                            -2px -2px rgb(180, 231, 231);
-
-                        color: yellow;
-                        width: 24%;
-                    }
-
-                    .cmdA:hover {
-                        font-size: 105%;
-                        background-color: rgb(100, 116, 170);
-                        border-color: yellow;
-                        color: white;
-                        box-shadow: 3px 3px rgb(219, 250, 250),
-                            -3px -3px rgb(219, 250, 250);
-                    }
-                </style>
-                <form dir="rtl" action="~/Masaref/outCreate" method="post">
-                    <div class="massX">
-                        <div class="outMasaref">
-                            <div>
-                                <input name="__RequestVerificationToken" type="hidden"
-                                    value="q4fmnWJFt7X2bYBi6SiwV6-sSOKXJTLqlqL0W_Hdspqh3wLiO8VgWFAUv6GKtoWtULfmdnpnnnj6sVYPXOrwBpSCbetyFX4LbBr7lQzFbWoqrDx96wkJUU_r9_e3q9r-jqwWfg2">
-                                <span>
-                                    <label class="form-group lbl1">حساب المصاريف</label>
-
-                                    <select class="" name="cust_No">
-                                        <option value="1">شبكة</option>
-                                        <option value="2">الراجحي</option>
-                                        <option value="3">مصاريف عامة</option>
-                                        <option value="4">صالح</option>
-                                    </select>
-                                </span>
-
-                                <span>
-                                    <label class="lbl2">مبلغ المصروف</label>
 
 
-                                    <input class="monyA" type="number" placeholder="المبلغ"
-                                        name="Mony" required  min="1">
-                                </span>
-                            </div>
-                            <div>
-
-                                <label class="lbl3">الملاحظات</label>
-                                <input class="noteA" name="Note" value="" required placeholder="اكتب الملاحظات هنا">
-                                <input class="cmdA" type="submit" value="حفظ المصروف">
-                            </div>
-                </form>
                 <br>
 
             </div>
     </div>
 
 
+    <div class="MyMassaref">
+        <form class="MyForm" dir="rtl" action="~/Masaref/outCreate" method="post">
+            <legend>إضافة مصروف</legend>
+            <fieldset>
+                <input name="__RequestVerificationToken" type="hidden"
+                    value="q4fmnWJFt7X2bYBi6SiwV6-sSOKXJTLqlqL0W_Hdspqh3wLiO8VgWFAUv6GKtoWtULfmdnpnnnj6sVYPXOrwBpSCbetyFX4LbBr7lQzFbWoqrDx96wkJUU_r9_e3q9r-jqwWfg2">
+                <div class="AllSpan">
+
+                    <span class="mySpan span1">
+                        <label class="lbl1">حساب المصاريف</label>
+
+                        <select class="" name="cust_No">
+                            <option value="1">شبكة</option>
+                            <option value="2">الراجحي</option>
+                            <option value="3">مصاريف عامة</option>
+                            <option value="4">صالح</option>
+                        </select>
+                    </span>
+
+                    <span class="mySpan span2">
+                        <label class="lbl2">مبلغ المصروف</label>
+                        <input id="monyZ" class="monyA" autocomplete="off" type="number" placeholder="المبلغ"
+                            name="Mony" required min="1">
+
+
+                    </span>
+
+
+                    <div class="mySpan span3">
+
+                        <label class="lbl3">الملاحظات</label>
+                        <input class="noteA" name="Note" value="" required placeholder="اكتب الملاحظات هنا"
+                            oninvalid="this.setCustomValidity('لابد من كتابة ملاحظة')"
+                            oninput="this.setCustomValidity('')" />
+
+                        <input class="cmdA" type="submit" value="حفظ المصروف">
+                    </div>
+
+
+
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+
+    </div>
     <div class="table-container">
         <h2 style="color:blue">السدادات</h2>
         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper">
@@ -1891,11 +1825,12 @@
 
             var wait = setTimeout(cb, ms);
 
-            document.onmousemove = document.mousedown = document.mouseup = document.onkeydown = document.onkeyup = document.focus = function () {
-                clearTimeout(wait);
-                wait = setTimeout(cb, ms);
+            document.onmousemove = document.mousedown = document.mouseup = document.onkeydown = document.onkeyup =
+                document.focus = function () {
+                    clearTimeout(wait);
+                    wait = setTimeout(cb, ms);
 
-            };
+                };
         }
 
 
@@ -1912,9 +1847,6 @@
             $("center").remove();
 
         });
-
-
-
     </script>
 
 </body>
