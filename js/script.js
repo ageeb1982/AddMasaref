@@ -4,8 +4,8 @@ if (txtMony.validity.typeMismatch) {
 }
 
 var chk = (oe) => {
-    alert("helo2")
-    alert(oe.target)
+    console.log("helo2")
+    console.log(oe.target)
     // var valx = oe.target;
     var valx = txtMony;
     console.log("object=" + valx);
@@ -31,8 +31,8 @@ var chk = (oe) => {
 };
 
 
-txtMony.addEventListener("invalid", chk(txtMony));
-txtMony.addEventListener("input", chk(txtMony));
+// txtMony.addEventListener("invalid", chk(txtMony));
+// txtMony.addEventListener("input", chk(txtMony));
 
 
 // /**

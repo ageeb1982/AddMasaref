@@ -1,93 +1,123 @@
-       
-        /* .MyMassaref * {
+/* .MyMassaref * {
             /*margin: 0; }*/
 
-       
-        .MyMassaref{
-            font-weight: bold;
-            border: 2px solid rgb(95, 80, 80);
-            border-radius: 10%;
-            padding: 10px;
-            box-shadow: 5px 5px black;
-            background-color: #b2c0d6;
-            justify-items: center;
-            align-items: center;
-            align-self: center;
-            width: 380px;
-            margin-left: auto;
-            margin-right: auto;
-            /* max-width: 38;
+body {
+    margin: 50px;
+}
+
+.MyMassaref {
+    font-family: -webkit-body;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid rgb(41, 33, 63);
+    border-radius: 10%;
+    padding: 10px;
+    box-shadow: 5px 5px darkblue;
+    background-color: #b2c0d6;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+    width: 443px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 38;
             min-width: 380px; */
-            /*height: 85px;
+    /*height: 85px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;*/
-            justify-content: space-around;
-            align-content: space-between;
-        }
+    justify-content: space-around;
+    align-content: space-between;
+}
 
-        .MyMassaref select {
-            width: 125px;
-        }
+.MyMassaref input {
+    border-color: darkblue;
+}
 
-        .MyMassaref label {
-            /* text-align: left;
+.MyMassaref select {
+    border-color: darkblue;
+}
+
+
+
+.MyMassaref select {
+    width: 145px;
+    height: 35px;
+}
+
+.MyMassaref label {
+    /* text-align: left;
             margin-left: 0px;
             margin-right: 0px;
             padding-left: 0px;
             padding-right: 0px; */
+}
 
-        }
-        /* .AllSpan:only-child{
+/* .AllSpan:only-child{
             display: flex;
         } */
-        legend{
-            margin-bottom: 10px;
-        }
-        .AllSpan{
-            /* margin-top: 0px; */
-        }
-        .span3{
-            margin-top: 10px;
-        }
+legend {
+    margin-bottom: 10 px;
+    color: darkblue;
+    text-align: right;
+    font-family: -webkit-body;
+    border-bottom: 1px solid darkblue;
+}
 
-        .MyMassaref .monyA {
-            width:70px;
-            text-align: center;
-        }
+.AllSpan {
+    /* margin-top: 0px; */
+}
 
-        .MyMassaref .lbl1 {
-            /* width: 22%; */
-        }
+.span3 {
+    margin-top: 10px;
+}
 
-        .MyMassaref .lbl2 {
-            /* width: 22%; */
-        }
+.MyMassaref .monyA {
+    width: 70px;
+    text-align: center;
+}
 
-        .MyMassaref .lbl3 {
-            /* width: 13%; */
-        }
+.MyMassaref .lbl1 {
+    /* width: 22%; */
+}
 
-        .MyMassaref .noteA {
-            width: 215px;
-        }
+.MyMassaref .lbl2 {
+    /* width: 22%; */
+}
 
-        .MyMassaref .cmdA {
-            background-color: rgb(45, 64, 126);
-            border: 2px solid white;
-            border-radius: 15%;
-            box-shadow: 2px 2px rgb(180, 231, 231),
-                -2px -2px rgb(180, 231, 231);
+.MyMassaref .lbl3 {
+    /* width: 13%; */
+}
 
-            color: yellow;
-            width: 24%;
-        }
+.MyMassaref .noteA {
+    width: 244px;
+}
 
-        .cmdA:hover {
-            font-size: 105%;
-            background-color: rgb(100, 116, 170);
-            border-color: yellow;
-            color: white;
-            box-shadow: 3px 3px rgb(219, 250, 250),
-                -3px -3px rgb(219, 250, 250);
-        }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.MyMassaref .cmdA {
+    background-color: rgb(45, 64, 126);
+    border: 2px solid white;
+    border-radius: 15%;
+    box-shadow: 2px 2px rgb(180, 231, 231), -2px -2px rgb(180, 231, 231);
+
+    color: yellow;
+    width: 105px;
+}
+
+.cmdA:hover {
+    font-size: 105%;
+    background-color: rgb(100, 116, 170);
+    border-color: yellow;
+    color: white;
+    box-shadow: 3px 3px rgb(219, 250, 250), -3px -3px rgb(219, 250, 250);
+}
