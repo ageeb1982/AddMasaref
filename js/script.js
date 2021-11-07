@@ -25,10 +25,56 @@ var chk = (oe) => {
     }
 };
 
-var txtSrch = document.getElementById("MassSrch");
-txtSrch.addEventListener("keyup", (oe) => {
-    let v2 = document.getElementById("MassSrch").value;
+function clearSelected() {
+    var txtCustNo = document
+        .getElementById("txtCustNo")
+        .querySelectorAll("option");
 
+    txtCustNo.forEach((bb) => {
+        bb.removeAttribute("selected");
+    });
+}
+
+let txtSrchX = document.getElementById("MassSrch");
+
+var cmdSrchX = document.getElementById("cmdSrch");
+
+let LoadInitData = () => {
+    var txtCustNo = document.getElementById("txtCustNo");
+    let url = "/Custs/GetMassAccount";
+    url = "data.json";
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+        let vx = "";
+        const datajson = this.responseText;
+
+        let data = JSON.parse(datajson);
+        let i = 0;
+        data.forEach((item) => {
+            if (i < 5) {
+                i++;
+                let rr = '<option  value="' + item.Id + '" >' + item.Name + "</option>";
+                vx += rr;
+            }
+        });
+
+        var cust_no = document.getElementById("txtCustNo");
+
+        cust_no.innerHTML += vx;
+    };
+    xhttp.open("GET", url);
+    xhttp.send();
+};
+
+LoadInitData();
+
+let srch = () => {
+    var txtCustNo = document
+        .getElementById("txtCustNo")
+        .querySelectorAll("option");
+    var OldValue = document.getElementById("txtCustNo").value;
+    let v2 = document.getElementById("MassSrch").value;
+    let IsSelect = false;
     //console.log(v2)
     //var url = '@Url.Action("GetCust", "Custs")';
     let url = "/Custs/GetCust";
@@ -39,29 +85,59 @@ txtSrch.addEventListener("keyup", (oe) => {
         const datajson = this.responseText;
 
         let data = JSON.parse(datajson);
-        data.forEach((item) => {
-            // console.log(v2)
-            var ee = item.Name.includes(v2);
-            // console.log(`name => ${item.Name}`)
-            if (item.Name.includes(v2)) {
-                var IsExiest = document.getElementById('txtCustNo').querySelector('[value="' + item.Id + '"]');
-                console.log("is Exiest=>");
-                console.log(IsExiest);
-                if (IsExiest != null) {
-                    let rr = "<option value=\"" + item.Id + "\">" + item.Name + "</option>";
-                    console.log("rr=>" + rr);
-                    vx += rr;
+        if (v2) {
+            data.forEach((item) => {
+                //   console.log(v2)
+                var ee = item.Name.includes(v2);
+                // console.log(`name => ${item.Name}`)
+                if (item.Name.includes(v2)) {
+                    var IsExiest = false;
+                    //   console.log(txtCustNo);
+                    txtCustNo.forEach((II) => {
+                        //   console.log(II.value);
+                        if (II.value == item.Id) {
+                            IsExiest = true;
+                        }
+                    });
+
+                    if (IsExiest == false) {
+                        let SelX = "";
+                        if (!IsSelect) {
+                            clearSelected();
+                            SelX = "selected";
+                            IsSelect = true;
+                        }
+                        let rr =
+                            "<option " +
+                            SelX +
+                            ' value="' +
+                            item.Id +
+                            '" >' +
+                            item.Name +
+                            "</option>";
+                        vx += rr;
+                    }
                 }
-            }
-        });
+                //   console.log("rr=>" + vx);
+            });
+        }
         var cust_no = document.getElementById("txtCustNo");
 
         cust_no.innerHTML += vx;
-
     };
     xhttp.open("GET", url);
     xhttp.send();
+};
 
+cmdSrchX.addEventListener("click", srch);
+
+txtSrchX.addEventListener("keypress", (oe) => {
+    if (oe.key == "Enter") {
+        oe.preventDefault();
+        srch();
+    }
+
+    //   srch();
 });
 
 // txtMony.addEventListener("invalid", chk(txtMony));
