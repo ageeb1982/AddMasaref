@@ -1,18 +1,17 @@
 const txtMony = document.getElementById("monyZ");
 if (txtMony.validity.typeMismatch) {
-    console.log('Input is not valid type');
+    console.log("Input is not valid type");
 }
 
 var chk = (oe) => {
-    console.log("helo2")
-    console.log(oe.target)
+    console.log("helo2");
+    console.log(oe.target);
     // var valx = oe.target;
     var valx = txtMony;
     console.log("object=" + valx);
     if (valx.validty.valueMissing) {
         console.log("ادخل قيمة");
-        valx.setCustomValidity("ادخل قيمة المصروف")
-
+        valx.setCustomValidity("ادخل قيمة المصروف");
     } else if (isNaN(valx.value)) {
         console.log("ليست رقم");
         valx.setCustomValidity("لابد من إدخال ارقام");
@@ -20,20 +19,53 @@ var chk = (oe) => {
         console.log("اقل من 0");
 
         valx.setCustomValidity("ادخل قيمة اكبر من 0");
-
     } else {
         valx.setCustomValidity("");
         return true;
     }
-
-
-
 };
 
+var txtSrch = document.getElementById("MassSrch");
+txtSrch.addEventListener("keyup", (oe) => {
+    let v2 = document.getElementById("MassSrch").value;
+
+    //console.log(v2)
+    //var url = '@Url.Action("GetCust", "Custs")';
+    let url = "/Custs/GetCust";
+    url = "data.json";
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+        let vx = "";
+        const datajson = this.responseText;
+
+        let data = JSON.parse(datajson);
+        data.forEach((item) => {
+            // console.log(v2)
+            var ee = item.Name.includes(v2);
+            // console.log(`name => ${item.Name}`)
+            if (item.Name.includes(v2)) {
+                var IsExiest = document.getElementById('txtCustNo').querySelector('[value="' + item.Id + '"]');
+                console.log("is Exiest=>");
+                console.log(IsExiest);
+                if (IsExiest != null) {
+                    let rr = "<option value=\"" + item.Id + "\">" + item.Name + "</option>";
+                    console.log("rr=>" + rr);
+                    vx += rr;
+                }
+            }
+        });
+        var cust_no = document.getElementById("txtCustNo");
+
+        cust_no.innerHTML += vx;
+
+    };
+    xhttp.open("GET", url);
+    xhttp.send();
+
+});
 
 // txtMony.addEventListener("invalid", chk(txtMony));
 // txtMony.addEventListener("input", chk(txtMony));
-
 
 // /**
 //  * @author ComFreek
@@ -82,8 +114,6 @@ var chk = (oe) => {
 //     }
 //     exports.InvalidInputHelper = InvalidInputHelper;
 // })(window);
-
-
 
 // InvalidInputHelper(document.getElementById("monyZ"), {
 //     defaultText: "أدخل قيمة المصروف",

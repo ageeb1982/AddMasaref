@@ -20,6 +20,113 @@
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $(function () {
+
+
+
+            var availableTags = [{
+                    value: "100",
+                    lable: "ActionScript"
+                },
+                {
+                    value: "101",
+                    lable: "AppleScript"
+                },
+                {
+                    value: "102",
+                    lable: "Asp"
+                },
+                {
+                    value: "103",
+                    lable: "BASIC"
+                },
+                {
+                    value: "104",
+                    lable: "C"
+                },
+                {
+                    value: "105",
+                    lable: "C++"
+                },
+                {
+                    value: "106",
+                    lable: "Clojure"
+                },
+                {
+                    value: "107",
+                    lable: "COBOL"
+                },
+                {
+                    value: "108",
+                    lable: "ColdFusion"
+                },
+                {
+                    value: "109",
+                    lable: "Erlang"
+                },
+                {
+                    value: "110",
+                    lable: "Fortran"
+                },
+                {
+                    value: "111",
+                    lable: "Groovy"
+                },
+                {
+                    value: "112",
+                    lable: "Haskell"
+                },
+                {
+                    value: "113",
+                    lable: "Java"
+                },
+                {
+                    value: "114",
+                    lable: "JavaScript"
+                },
+                {
+                    value: "115",
+                    lable: "Lisp"
+                },
+                {
+                    value: "116",
+                    lable: "Perl"
+                },
+                {
+                    value: "117",
+                    lable: "PHP"
+                },
+                {
+                    value: "118",
+                    lable: "Python"
+                },
+                {
+                    value: "119",
+                    lable: "Ruby"
+                },
+                {
+                    value: "120",
+                    lable: "Scala"
+                },
+                {
+                    value: "121",
+                    lable: "Scheme"
+                }
+            ];
+
+
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+        });
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
@@ -30,15 +137,22 @@
     <div class="MyMassaref">
         <form class="MyForm" lang="ar-SA" dir="rtl" action="~/Masaref/outCreate" method="post">
             <legend>إضافة مصروف</legend>
-            <fieldset>
-                <input name="__RequestVerificationToken" type="hidden"
-                    value="q4fmnWJFt7X2bYBi6SiwV6-sSOKXJTLqlqL0W_Hdspqh3wLiO8VgWFAUv6GKtoWtULfmdnpnnnj6sVYPXOrwBpSCbetyFX4LbBr7lQzFbWoqrDx96wkJUU_r9_e3q9r-jqwWfg2">
-                <div class="AllSpan">
+            <br>
 
+            <fieldset>
+
+                <div class="AllSpan">
+                    <div class="mySpan span0">
+                        <label>بحث</label>
+                        <input id="MassSrch" type="search" value="">
+                        <input name="__RequestVerificationToken" type="hidden"
+                            value="q4fmnWJFt7X2bYBi6SiwV6-sSOKXJTLqlqL0W_Hdspqh3wLiO8VgWFAUv6GKtoWtULfmdnpnnnj6sVYPXOrwBpSCbetyFX4LbBr7lQzFbWoqrDx96wkJUU_r9_e3q9r-jqwWfg2">
+
+                    </div>
                     <span class="mySpan span1">
                         <label class="lbl1">حساب المصاريف</label>
 
-                        <select class="" name="cust_No">
+                        <select id="txtCustNo" class="" name="cust_No">
                             <option value="1">شبكة</option>
                             <option value="2">الراجحي</option>
                             <option value="3">مصاريف عامة</option>

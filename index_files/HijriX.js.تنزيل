@@ -1,1 +1,0 @@
-$('.HijriX').calendarsPicker({calendar:$.calendars.instance('islamic'),showTrigger:'<button type="button" class="trigger">...</button>',dateFormat:'yyyy/mm/dd',showOtherMonths:true,});

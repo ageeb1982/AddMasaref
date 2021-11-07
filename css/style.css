@@ -3,6 +3,7 @@
 
 body {
     margin: 50px;
+    background-color: rgb(104, 101, 107);
 }
 
 .MyMassaref {
@@ -38,7 +39,14 @@ body {
     border-color: darkblue;
 }
 
+.span0 {
+    text-align: right;
 
+}
+
+#MassSrch {
+    text-align: center;
+}
 
 .MyMassaref select {
     width: 145px;
