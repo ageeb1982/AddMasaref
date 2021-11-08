@@ -11,7 +11,7 @@
     <meta name="keywords" content="ageeb1982@gmail.com,AGEEB SOFT - نموذج إضافة مصروف" />
     <meta name="author" content="AGEEB SOFT" />
     <link rel="shortcut icon" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
     <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -20,55 +20,17 @@
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/script.js"></script> -->
+    <!-- for Import html file -->
+    <script defer src="js/loadhtml.js"></script>
 </head>
 
-<body>
-    <div class="MyMassaref">
-        <form class="MyForm" lang="ar-SA" dir="rtl" action="~/Masaref/outCreate" method="post">
-            <legend>إضافة مصروف</legend>
-            <br />
+<body style="height: 1000px;">
 
-            <fieldset>
-                <div class="AllSpan">
-                    <div class="mySpan span0">
-                        <label>بحث بالاسم</label>
-                        <input id="MassSrch" type="search" value="" autocomplete="off" />
-                        <input class="cmdA" id="cmdSrch" type="button" value="بحث" />
-                        <input name="__RequestVerificationToken" type="hidden"
-                            value="q4fmnWJFt7X2bYBi6SiwV6-sSOKXJTLqlqL0W_Hdspqh3wLiO8VgWFAUv6GKtoWtULfmdnpnnnj6sVYPXOrwBpSCbetyFX4LbBr7lQzFbWoqrDx96wkJUU_r9_e3q9r-jqwWfg2" />
-                    </div>
-                    <span class="mySpan span1">
-                        <label class="lbl1">حساب المصاريف</label>
+    <iframe src="_MiniMassaref.html" style="border:none;" height="100%" width="100%" />
 
-                        <select id="txtCustNo" class="" name="cust_No">
-                            <!-- <option value="1">شبكة</option>
-                            <option value="2">الراجحي</option>
-                            <option value="3">مصاريف عامة</option>
-                            <option value="4">صالح</option> -->
-                        </select>
-                    </span>
-
-                    <span class="mySpan span2">
-                        <label class="lbl2">مبلغ المصروف</label>
-                        <input id="monyZ" class="monyA" autocomplete="off" type="number" placeholder="المبلغ"
-                            name="Mony" required min="1" />
-                    </span>
-
-                    <div class="mySpan span3">
-                        <label class="lbl3">الملاحظات</label>
-                        <input class="noteA" name="Note" value="" required placeholder="اكتب الملاحظات هنا"
-                            oninvalid="this.setCustomValidity('لابد من كتابة ملاحظة')"
-                            oninput="this.setCustomValidity('')" />
-
-                        <input class="cmdA" type="submit" value="حفظ المصروف" />
-                    </div>
-                </div>
-            </fieldset>
-        </form>
-    </div>
 </body>
+
 
 </html>

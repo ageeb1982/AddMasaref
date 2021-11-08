@@ -1,12 +1,11 @@
-const txtMony = document.getElementById("monyZ");
-if (txtMony.validity.typeMismatch) {
-    console.log("Input is not valid type");
-}
+// const txtMony = document.getElementById("monyZ");
+// if (txtMony.validity.typeMismatch) {
+//     console.log("Input is not valid type");
+// }
 
 var chk = (oe) => {
-    console.log("helo2");
-    console.log(oe.target);
-    // var valx = oe.target;
+
+
     var valx = txtMony;
     console.log("object=" + valx);
     if (valx.validty.valueMissing) {
@@ -25,6 +24,7 @@ var chk = (oe) => {
     }
 };
 
+//unSelect option
 function clearSelected() {
     var txtCustNo = document
         .getElementById("txtCustNo")
@@ -39,10 +39,11 @@ let txtSrchX = document.getElementById("MassSrch");
 
 var cmdSrchX = document.getElementById("cmdSrch");
 
+//load Defult Data
 let LoadInitData = () => {
     var txtCustNo = document.getElementById("txtCustNo");
-    let url = "/Custs/GetMassAccount";
-    url = "data.json";
+    let url = "~/Custs/GetMassAccount";
+    url = "/Data/data.json";
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
         let vx = "";
@@ -68,6 +69,7 @@ let LoadInitData = () => {
 
 LoadInitData();
 
+//Search Function
 let srch = () => {
     var txtCustNo = document
         .getElementById("txtCustNo")
@@ -78,7 +80,7 @@ let srch = () => {
     //console.log(v2)
     //var url = '@Url.Action("GetCust", "Custs")';
     let url = "/Custs/GetCust";
-    url = "data.json";
+    url = "/Data/data.json";
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
         let vx = "";
@@ -97,6 +99,9 @@ let srch = () => {
                         //   console.log(II.value);
                         if (II.value == item.Id) {
                             IsExiest = true;
+                            clearSelected();
+                            II.setAttribute('selected', 'selected')
+
                         }
                     });
 
@@ -129,15 +134,17 @@ let srch = () => {
     xhttp.send();
 };
 
+//cmdSrch click
 cmdSrchX.addEventListener("click", srch);
 
+// If Press Enter Button
 txtSrchX.addEventListener("keypress", (oe) => {
     if (oe.key == "Enter") {
         oe.preventDefault();
         srch();
     }
 
-    //   srch();
+
 });
 
 // txtMony.addEventListener("invalid", chk(txtMony));
